@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49ef6535e8b61941b6305a65205e4c7, type: 3}
+  m_Name: 2048 Board Demo
+  m_EditorClassIdentifier: 
+  <Rows>k__BackingField: 5
+  <Columns>k__BackingField: 5
+  <CellSize>k__BackingField: 150
+  <Padding>k__BackingField: {x: 40, y: 40}
+  <Spacing>k__BackingField: {x: 25, y: 25}
+  <CenterOffset>k__BackingField: {x: 0, y: 0}
+  <TileInfos>k__BackingField:
+  - Number: 2
+    TextColor: {r: 0.46666667, g: 0.43137255, b: 0.39607844, a: 1}
+    BackgroundColor: {r: 0.93333334, g: 0.89411765, b: 0.85490197, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 4
+    TextColor: {r: 0.46666667, g: 0.43137255, b: 0.39607844, a: 1}
+    BackgroundColor: {r: 0.93333334, g: 0.88235295, b: 0.7882353, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 8
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.9529412, g: 0.69803923, b: 0.47843137, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 16
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.9647059, g: 0.5882353, b: 0.39215687, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 32
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.96862745, g: 0.4862745, b: 0.37254903, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 64
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.96862745, g: 0.37254903, b: 0.23137255, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 128
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8156863, b: 0.4509804, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 256
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 512
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 1024
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
+  - Number: 2048
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 0}
+    UserBackgroundSprite: 0
