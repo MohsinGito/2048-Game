@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Utilities.Audio;
 
 public class BoardManager : MonoBehaviour
 {
@@ -146,7 +147,9 @@ public class BoardManager : MonoBehaviour
             }
         }
 
-        if (changed) {
+        if (changed)
+        {
+            AudioController.Instance.PlayAudio(AudioName.TILES_MOVE);
             StartCoroutine(WaitForChanges());
         }
     }
@@ -201,6 +204,7 @@ public class BoardManager : MonoBehaviour
 
             b.SetState(newInfo, Gameboard.TilesScaleAnimDuration); 
             GameManager.Instance.IncreaseScore(newInfo.Number);
+            AudioController.Instance.PlayAudio(AudioName.TILES_MERGE);
         });
     }
 

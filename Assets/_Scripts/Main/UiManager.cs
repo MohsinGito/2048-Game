@@ -16,6 +16,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private TMP_Text gameOverCurrentScores;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject pauseGamePanel;
+    [SerializeField] private GameObject continueButton;
 
     [Header("Gameplay PowerUps")]
     [SerializeField] private TMP_Text hammerPowerupCount;
@@ -23,7 +24,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button hammerPowerupButton;
     [SerializeField] private Button mutliplierPowerupButton;
     [SerializeField] private Image multiplierFill;
-
+    
     public bool MultiplierActive { private set; get; }
     public bool HammerActive { private set; get; }
 
@@ -45,7 +46,7 @@ public class UiManager : MonoBehaviour
     public void OnGameEnded()
     {
         pauseGamePanel.SetActive(false);
-        GameManager.Instance.Board.InputPaused = true;
+        continueButton.SetActive(GameManager.Instance.CanContinue);
         DOVirtual.DelayedCall(1f, () => gameOverPanel.SetActive(true));
 
         gameOverHighScores.text = SessionManager.Instance.HighScores.ToString();
@@ -72,6 +73,14 @@ public class UiManager : MonoBehaviour
     #endregion
 
     #region Buttons Methods
+
+    public void ContinueGame()
+    {
+        GameManager.Instance.NewGame(true);
+        GameManager.Instance.Board.InputPaused = false;
+        SessionManager.Instance.ModifyCoins(-100);
+        displayCoins.text = SessionManager.Instance.PlayerCoins.ToString();
+    }
 
     public void ReturnToMain()
     {

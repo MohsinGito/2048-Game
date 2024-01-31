@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using Utilities.Audio;
 
 public class GridTile : MonoBehaviour
 {
@@ -92,6 +93,7 @@ public class GridTile : MonoBehaviour
             return;
 
         destroyedWithHammer = true;
+        AudioController.Instance.PlayAudio(AudioName.TILES_MERGE);
         transform.DOScale(Vector3.zero, 0.15f).OnComplete(() =>
         {
             GameManager.Instance.Board.RemoveTile(this);

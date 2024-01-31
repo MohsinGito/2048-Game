@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 10233866}
   - component: {fileID: 10233865}
   - component: {fileID: 10233867}
+  - component: {fileID: 10233868}
   m_Layer: 5
   m_Name: Shop Button
   m_TagString: Untagged
@@ -255,6 +256,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &10233868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10233863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484e689775c8c444a6932193ab4abac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: 10
 --- !u!1 &100398171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,6 +1118,7 @@ GameObject:
   - component: {fileID: 787754110}
   - component: {fileID: 787754112}
   - component: {fileID: 787754113}
+  - component: {fileID: 787754114}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -1240,6 +1255,19 @@ MonoBehaviour:
   zoomScale: 1.1
   zoomDuration: 0.65
   zoomType: 0
+--- !u!114 &787754114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787754108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484e689775c8c444a6932193ab4abac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: 9
 --- !u!1 &896228155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1602,7 @@ GameObject:
   - component: {fileID: 1791147455}
   - component: {fileID: 1791147454}
   - component: {fileID: 1791147456}
+  - component: {fileID: 1791147457}
   m_Layer: 5
   m_Name: Bonus Button
   m_TagString: Untagged
@@ -1694,6 +1723,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1791147457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791147452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484e689775c8c444a6932193ab4abac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: 10
 --- !u!1 &1825444637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1748,7 @@ GameObject:
   - component: {fileID: 1825444640}
   - component: {fileID: 1825444639}
   - component: {fileID: 1825444641}
+  - component: {fileID: 1825444642}
   m_Layer: 5
   m_Name: Settings Button
   m_TagString: Untagged
@@ -1826,6 +1869,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1825444642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825444637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484e689775c8c444a6932193ab4abac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: 10
 --- !u!1 &1828698692
 GameObject:
   m_ObjectHideFlags: 0

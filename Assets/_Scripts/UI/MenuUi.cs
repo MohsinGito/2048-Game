@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using Utilities.Audio;
 
 public class MenuUi : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class MenuUi : MonoBehaviour
             playerCoins.text = SessionManager.Instance.PlayerCoins.ToString();
         };
         OverlayUiManager.Instance.BonusGameUi.OnClosed = () => playerCoins.text = SessionManager.Instance.PlayerCoins.ToString();
+        AudioController.Instance.PlayAudio(AudioName.MENU_BG_MUSIC);
     }
 
     public void OpenSettings()

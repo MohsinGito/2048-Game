@@ -2,6 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Utilities.Audio;
 
 public class SettingsUI : MonoBehaviour
 {
@@ -57,9 +58,11 @@ public class SettingsUI : MonoBehaviour
         {
             case AudioType.Sound:
                 SessionManager.Instance.SetSound(audioStates[type]);
+                AudioController.Instance.MuteSFX(!audioStates[type]);
                 break;
             case AudioType.Music:
                 SessionManager.Instance.SetMusic(audioStates[type]);
+                AudioController.Instance.MuteMusic(!audioStates[type]);
                 break;
         }
     }

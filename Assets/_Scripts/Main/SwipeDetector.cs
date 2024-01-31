@@ -50,7 +50,7 @@ public class SwipeDetector : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (isPointerDown && IsWithinSwipeArea(eventData.position))
+        if (isPointerDown)// && IsWithinSwipeArea(eventData.position))
         {
             currentSwipe = eventData.position - startPointerPosition;
             DetectSwipe();

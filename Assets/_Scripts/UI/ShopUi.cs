@@ -15,7 +15,8 @@ public class ShopUi : MonoBehaviour
     public void Display()
     {
         playerCoins.text = SessionManager.Instance.PlayerCoins.ToString();
-        watchAdButton.SetActive(SessionManager.Instance.IsAdAvailable());
+        watchAdButton.SetActive(false);
+        //watchAdButton.SetActive(SessionManager.Instance.IsAdAvailable());
 
         panelGroup.alpha = 0;
         panelGroup.gameObject.SetActive(true);
@@ -30,18 +31,24 @@ public class ShopUi : MonoBehaviour
 
     public void WatchAd()
     {
-        if (!SessionManager.Instance.IsAdAvailable())
+        if (!SessionManager.Instance.IsAdAvailable()) 
         {
             OverlayUiManager.Instance.InfoPopUp.Display("Ad Break Over for Today! More Coming Tomorrow!");
             return;
         }
 
-        SessionManager.Instance.AddCoins(150);
-        SessionManager.Instance.TodaysAdViewed();
-        OverlayUiManager.Instance.InfoPopUp.Display("Congrats! You've Earned 150 Coins!");
+        AdsManager.Instance.DisplayRewardedAd(() =>
+        {
+            SessionManager.Instance.ModifyCoins(150);
+            SessionManager.Instance.TodaysAdViewed();
+            OverlayUiManager.Instance.InfoPopUp.Display("Congrats! You've Earned 150 Coins!");
 
-        watchAdButton.SetActive(false);
-        playerCoins.text = SessionManager.Instance.PlayerCoins.ToString();
+            watchAdButton.SetActive(false);
+            playerCoins.text = SessionManager.Instance.PlayerCoins.ToString();
+        }, () =>
+        {
+            OverlayUiManager.Instance.InfoPopUp.Display("Uable To View Ad!");
+        } );
     }
 
     public void PurchaseItem(int itemId)
@@ -58,11 +65,11 @@ public class ShopUi : MonoBehaviour
                 SessionManager.Instance.ModifyHammarPowerup(1);
                 break;
             case ShopItem.Multiplier:
-                SessionManager.Instance.ModifyHammarPowerup(1);
+                SessionManager.Instance.ModifyMultiplierPowerup(1);
                 break;
         }
 
-        SessionManager.Instance.AddCoins(-150);
+        SessionManager.Instance.ModifyCoins(-150);
         playerCoins.text = SessionManager.Instance.PlayerCoins.ToString(); 
         OverlayUiManager.Instance.InfoPopUp.Display("Purchase Successful!");
     }

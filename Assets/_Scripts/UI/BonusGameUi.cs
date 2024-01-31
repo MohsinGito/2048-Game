@@ -6,6 +6,7 @@ using DG.Tweening;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Utilities.Audio;
 
 public class BonusGameUi : MonoBehaviour
 {
@@ -83,6 +84,7 @@ public class BonusGameUi : MonoBehaviour
         informationText.text = "To Win, 3 Identical Chips Must Fall In A Line";
 
         StartCoroutine(StartSpinningReels());
+        AudioController.Instance.PlayAudio(AudioName.SLOT_SPIN);
         DOVirtual.DelayedCall(spinDuration, () =>
         {
             isSpinning = false;
@@ -104,8 +106,9 @@ public class BonusGameUi : MonoBehaviour
 
         if (allSymbolsMatch)
         {
+            AudioController.Instance.PlayAudio(AudioName.BONUS_WIN);
             informationText.text = $"Congrats You Won {rewardCoins} Coins";
-            SessionManager.Instance.AddCoins(rewardCoins);
+            SessionManager.Instance.ModifyCoins(rewardCoins);
         }
         else
         {
@@ -113,6 +116,7 @@ public class BonusGameUi : MonoBehaviour
                 informationText.text = "Sorry, Try Again Tomorrow";
             else
                 informationText.text = "Oops, You Can Try Again";
+            AudioController.Instance.PlayAudio(AudioName.BONUS_LOOSE);
         }
 
         spinButton.interactable = true;
