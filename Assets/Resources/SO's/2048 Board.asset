@@ -18,6 +18,9 @@ MonoBehaviour:
   <Padding>k__BackingField: {x: 40, y: 40}
   <Spacing>k__BackingField: {x: 25, y: 25}
   <CenterOffset>k__BackingField: {x: 0, y: 0}
+  <InitialTiles>k__BackingField: 2
+  <TilesMoveAnimDuration>k__BackingField: 0.125
+  <TilesScaleAnimDuration>k__BackingField: 0.05
   <TileInfos>k__BackingField:
   - Number: 2
     TextColor: {r: 1, g: 1, b: 1, a: 1}
@@ -27,52 +30,80 @@ MonoBehaviour:
   - Number: 4
     TextColor: {r: 1, g: 1, b: 1, a: 1}
     BackgroundColor: {r: 0.93333334, g: 0.88235295, b: 0.7882353, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: cc1aaafbb990d9149b9ac0b2be48f212, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: d6b5aca0067c83744a5ac0cbb901f25a, type: 3}
     UserBackgroundSprite: 1
   - Number: 8
     TextColor: {r: 1, g: 1, b: 1, a: 1}
     BackgroundColor: {r: 0.9529412, g: 0.69803923, b: 0.47843137, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: 9251cbc9e1a6658438275d15110f9d37, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: c60e2b5eb0b4ed54d9b8acbe7737e364, type: 3}
     UserBackgroundSprite: 1
   - Number: 16
     TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
     BackgroundColor: {r: 0.9647059, g: 0.5882353, b: 0.39215687, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: bf33c35ec8aa98349954250420fb966a, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: 732c3e39b2a242f49994c4ed1e76fa2e, type: 3}
     UserBackgroundSprite: 1
   - Number: 32
     TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
     BackgroundColor: {r: 0.96862745, g: 0.4862745, b: 0.37254903, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: a075353bf6eb20842a907a5639873b03, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: 472553b818dd09543b7966e604e741f6, type: 3}
     UserBackgroundSprite: 1
   - Number: 64
     TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
     BackgroundColor: {r: 0.96862745, g: 0.37254903, b: 0.23137255, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: ca8cd9bddc9888f488d40719ae5fbe95, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: 9112d4943f51c494cacccc49ff113822, type: 3}
     UserBackgroundSprite: 1
   - Number: 128
     TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
     BackgroundColor: {r: 0.92941177, g: 0.8156863, b: 0.4509804, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: ca8cd9bddc9888f488d40719ae5fbe95, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: 472553b818dd09543b7966e604e741f6, type: 3}
     UserBackgroundSprite: 1
   - Number: 256
     TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
     BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: ca8cd9bddc9888f488d40719ae5fbe95, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: fde3e8156a38bf94c8dfa5d24d7366b2, type: 3}
     UserBackgroundSprite: 1
   - Number: 512
     TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
     BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: ca8cd9bddc9888f488d40719ae5fbe95, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: 8875a3d7f21657b41a9c8b728b47237e, type: 3}
     UserBackgroundSprite: 1
   - Number: 1024
     TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
     BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: ca8cd9bddc9888f488d40719ae5fbe95, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: 340bea1eee558b24fb3399a45d4e5f3c, type: 3}
     UserBackgroundSprite: 1
   - Number: 2048
     TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
     BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
-    BackgroundSprite: {fileID: 21300000, guid: ca8cd9bddc9888f488d40719ae5fbe95, type: 3}
+    BackgroundSprite: {fileID: 21300000, guid: 340bea1eee558b24fb3399a45d4e5f3c, type: 3}
     UserBackgroundSprite: 1
-  <TilesMoveAnimDuration>k__BackingField: 0.125
-  <TilesScaleAnimDuration>k__BackingField: 0.05
+  - Number: 4096
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 21300000, guid: a2222ea1887ae924d932766b776f4993, type: 3}
+    UserBackgroundSprite: 1
+  - Number: 8192
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 21300000, guid: de7e652cd0992194080e0fdd1648e686, type: 3}
+    UserBackgroundSprite: 1
+  - Number: 16384
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 21300000, guid: c78bc073f7843524caa6202924f5c28f, type: 3}
+    UserBackgroundSprite: 1
+  - Number: 32768
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 21300000, guid: 03642ef2e57315f4aae84cde4689882e, type: 3}
+    UserBackgroundSprite: 1
+  - Number: 65536
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 21300000, guid: 26cb835fe3e314b46aac047bb11be22d, type: 3}
+    UserBackgroundSprite: 1
+  - Number: 131072
+    TextColor: {r: 0.9764706, g: 0.9647059, b: 0.9490196, a: 1}
+    BackgroundColor: {r: 0.92941177, g: 0.8, b: 0.38431373, a: 1}
+    BackgroundSprite: {fileID: 21300000, guid: d378341d54e1cba449041d12e8fd7004, type: 3}
+    UserBackgroundSprite: 1

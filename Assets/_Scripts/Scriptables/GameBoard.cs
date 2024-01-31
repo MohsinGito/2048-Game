@@ -27,4 +27,13 @@ public class TileInfo
     public Color BackgroundColor = Color.white;
     public Sprite BackgroundSprite;
     public bool UserBackgroundSprite;
+
+    public TileInfo(TileInfo info) 
+    {
+        Number = info.Number;
+        TextColor = info.TextColor;
+        BackgroundColor = info.BackgroundColor;
+        BackgroundSprite = info.BackgroundSprite;
+        UserBackgroundSprite = info.UserBackgroundSprite;
+    }
 }

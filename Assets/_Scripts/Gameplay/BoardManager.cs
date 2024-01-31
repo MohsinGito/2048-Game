@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Utilities.Audio;
+using System.IO;
 
 public class BoardManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class BoardManager : MonoBehaviour
     private List<GridCell> girdCells;
     private List<GridRow> gridRows;
     private List<GridTile> tiles;
+    private List<TileInfo> tileInfos;
     private bool waiting;
     private bool isPaused;
     private Tween pauseTween;
@@ -35,6 +37,10 @@ public class BoardManager : MonoBehaviour
         gridRows = new List<GridRow>();
         girdCells = new List<GridCell>();
         tiles = new List<GridTile>(Gameboard.Rows * Gameboard.Columns);
+
+        tileInfos = new List<TileInfo>();
+        for (int i = 0; i < Gameboard.TileInfos.Count; i++)
+            tileInfos.Add(new TileInfo(Gameboard.TileInfos[i]));
     }
 
     public void Init()
@@ -92,7 +98,7 @@ public class BoardManager : MonoBehaviour
     {
         GridTile tile = Instantiate(GridTile, Grid.transform);
         tile.Init(Grid.GetRandomEmptyCell(), Gameboard.TilesMoveAnimDuration);
-        tile.SetState(Gameboard.TileInfos[0]);
+        tile.SetState(tileInfos[0]);
         tiles.Add(tile);
     }
 
@@ -195,11 +201,8 @@ public class BoardManager : MonoBehaviour
         tiles.Remove(a);
         a.Merge(b.cell, () =>
         {
-            int index = Mathf.Clamp(IndexOf(b.info) + 1, 0, Gameboard.TileInfos.Count - 1);
-            TileInfo newInfo = new TileInfo(); 
-            newInfo.BackgroundSprite = Gameboard.TileInfos[index].BackgroundSprite;
-            newInfo.TextColor = Gameboard.TileInfos[index].TextColor;
-            newInfo.UserBackgroundSprite = Gameboard.TileInfos[index].UserBackgroundSprite;
+            int index = Mathf.Clamp(IndexOf(b.info) + 1, 0, tileInfos.Count - 1);
+            TileInfo newInfo = new TileInfo(tileInfos[index]);
             newInfo.Number = b.info.Number * 2;
 
             b.SetState(newInfo, Gameboard.TilesScaleAnimDuration); 
@@ -210,14 +213,14 @@ public class BoardManager : MonoBehaviour
 
     private int IndexOf(TileInfo state)
     {
-        for (int i = 0; i < Gameboard.TileInfos.Count; i++)
+        for (int i = 0; i < tileInfos.Count; i++)
         {
-            if (state.Number == Gameboard.TileInfos[i].Number) {
+            if (state.Number == tileInfos[i].Number) {
                 return i;
             }
         }
 
-        return Gameboard.TileInfos.Count - 1;
+        return tileInfos.Count - 1;
     }
 
     private IEnumerator WaitForChanges()
