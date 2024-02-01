@@ -15,8 +15,7 @@ public class ShopUi : MonoBehaviour
     public void Display()
     {
         playerCoins.text = SessionManager.Instance.PlayerCoins.ToString();
-        watchAdButton.SetActive(false);
-        //watchAdButton.SetActive(SessionManager.Instance.IsAdAvailable());
+        watchAdButton.SetActive(SessionManager.Instance.IsAdAvailable());
 
         panelGroup.alpha = 0;
         panelGroup.gameObject.SetActive(true);
