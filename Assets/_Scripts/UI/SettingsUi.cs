@@ -65,7 +65,7 @@ public class SettingsUI : MonoBehaviour
                 AudioController.Instance.MuteMusic(!audioStates[type]);
                 break;
         }
-    }
+    } 
 
     public void OpenURL(string url)
     {
