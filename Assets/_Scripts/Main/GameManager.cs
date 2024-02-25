@@ -28,12 +28,6 @@ public class GameManager : MonoBehaviour
         AudioController.Instance.PlayAudio(AudioName.GAMEPLAY_MUSIC);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            GameOver();
-    }
-
     public void NewGame(bool continuedGame = false)
     {
         CurrentScores = continuedGame ? CurrentScores : 0;
